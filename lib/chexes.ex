@@ -63,13 +63,13 @@ defimpl Chexes, for: MapSet do
 end
 
 if Code.ensure_loaded?(Ecto) do
-  defimpl Chexes, for: Ecto.Date do
-    alias Chexes
-    def blank?(%Ecto.Date{year: 0, month: 0, day: 0}), do: true
-    def blank?(%Ecto.Date{year: 1, month: 1, day: 1}), do: true
-    def blank?(_), do: false
-    def present?(data), do: not Chexes.blank?(data)
-  end
+#  defimpl Chexes, for: Ecto.Date do
+#    alias Chexes
+#    def blank?(%Ecto.Date{year: 0, month: 0, day: 0}), do: true
+#    def blank?(%Ecto.Date{year: 1, month: 1, day: 1}), do: true
+#    def blank?(_), do: false
+#    def present?(data), do: not Chexes.blank?(data)
+#  end
 
   defimpl Chexes, for: Ecto.Association.NotLoaded do
     alias Chexes
